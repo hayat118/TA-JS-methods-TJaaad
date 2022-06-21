@@ -3,22 +3,47 @@
 /*
   Create a function named addTwo which accepts a number, adds 2 to the number and return the new value.
 */
+function addTwo(n){
+ var number=n+2;
+  return number;
+}
+addTwo();
 
 /*
   Create a function named addThree which accepts a number, adds 3 to the number and return the new value.
 */
-
+function addThree(n){
+ var number=n+3;
+  return number;
+}
+addThree();
 /*
   Create a function named addFive which accepts a number, adds 5 to the number and return the new value.
 */
-
+function addFive(n){
+ var number=n+5;
+  return number;
+}
+addFive();
 /*
   Create a function named addTwoToArray which accepts:
     - An array of numbers
     - Returns a new array where 2 is added to each element
     - While doing so use the funciton addTwo
 */
+let arr=[2,3,4,5,6];
+function addTwoToArray(arr){
+  let finalArray=[];
+ function addTwo(n){
+   for(let i=0;i<number.arr;i++){
+  finalArray=arr[i]+2;
 
+   }
+ finalArray.push(number)
+}
+  return finalArray;
+
+}
 /*
   Create a function named addThreeToArray which accepts:
     - an array of numbers
@@ -319,3 +344,9 @@ filter is a higher order function.
     console.log(multiplyByFive(20)); // 180
     console.log(multiplyByFive(5)); // 45
 */
+function multiplyBy(num){
+  return function(num2){
+    return num*num2;
+  }
+}
+let multiplyByFive=multiplyBy(5);
