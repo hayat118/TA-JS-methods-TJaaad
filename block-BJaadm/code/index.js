@@ -14,13 +14,20 @@ let persons = [
 ];
 
 // Create an array peopleName and store value of sex key from persons array
-
+// let peopelName=persons.filter((persons)=>)
 // Create an array peopleGrade and store the value of grade key from persons array
 
 // Create an array peopleSex and store the value of sex key from persons array
 
 // Log the filtered named of people in peopleName that starts with 'J' or 'P'
-
+let filteredName=persons.filter((persons)=>{
+  if(
+    persons.name.startsWith("J")||
+    persons.name.startsWith("P")
+  ){
+    return true;
+  }
+})
 // Log the length of filtered named of people in peopleName that starts with 'A' and 'C'
 
 // Log all the filtered male ('M') in persons array
@@ -30,7 +37,11 @@ let persons = [
 // Log all the filtered female ('F') whose name starts with 'C' or 'J' in persons array
 
 // Log all the even numbers from peopleGrade array
-
+let even=persons.grade.filter((grade)=>{
+  if(persons.grade%2==0){
+    return true;
+  }
+});
 // Find the first name that starts with 'J' in persons array and log the object
 
 // Find the first name that starts with 'P' in persons array and log the object
