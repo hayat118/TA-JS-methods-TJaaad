@@ -10,7 +10,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
-![](./img/main.png)
+![First problem](./img/imgname.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -19,6 +19,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
+![second problem](./img/img1.jpeg)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
