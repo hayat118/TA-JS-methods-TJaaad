@@ -1,8 +1,13 @@
 // NOTE: You can not use reduce methods to solve this exercise
+  let total=0;
 
 function countAllPeople() {
   // your code goes here
+  for (let i=0;i<got['houses'].length;i++){
+     total++;
+  }
 }
+console.log(total)
 
 function peopleByHouses() {
   // your code goes here
