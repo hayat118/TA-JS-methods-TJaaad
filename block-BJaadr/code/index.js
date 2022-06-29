@@ -2,47 +2,78 @@
 
 function countAllPeople() {
   // your code goes here
- let totalPeople= 0;
- got.houses.reduce((acc,cv)=>{
-    totalPeople++
+   return got.houses.reduce((acc,cv)=>{
+    acc=acc+cv.people.length;
+    return acc;
   },0)
-  return totalPeople;
 }
 
 function peopleByHouses() {
   // your code goes here
-  let total=got.houses.reduce((acc,cv)=>{
-    if(acc[cv]){
-      acc[cv]=acc[cv]+1;
-    }else{
-      acc[cv]=1;
-    }
-  return acc;
- },{})
+  return got.houses.reduce((acc,cv)=>{
+    acc[cv.name]=cv.people.length;
+    return acc;
+  },{})
 }
-
 function everyone() {
   // your code goes here
+  return got.houses.reduce((acc,cv)=>{
+    acc=acc.concat(cv.people.map((p)=>p.name));
+    return acc;
+  },[])
 }
 
 function nameWithS() {
   // your code goes here
+    return got.houses.reduce((acc,cv)=>{
+    acc=acc.concat(cv.people
+      .map((p)=>p.name)
+      .filter(name=>name.toLowerCase().includes("s")));
+    return acc;
+  },[])
 }
+
 
 function nameWithA() {
   // your code goes here
+      return got.houses.reduce((acc,cv)=>{
+    acc=acc.concat(cv.people
+      .map((p)=>p.name)
+      .filter(name=>name.toLowerCase().includes("a")));
+    return acc;
+  },[])
 }
+
 
 function surnameWithS() {
   // your code goes here
+      return got.houses.reduce((acc,cv)=>{
+    acc=acc.concat(cv.people
+      .map((p)=>p.name)
+      .filter(name=>name.split(" ")[1].toLowerCase().includes("s")));
+    return acc;
+  },[])
 }
+
 
 function surnameWithA() {
   // your code goes here
+       return got.houses.reduce((acc,cv)=>{
+    acc=acc.concat(cv.people
+      .map((p)=>p.name)
+      .filter(name=>name.split(" ")[1].toLowerCase().includes("a")));
+    return acc;
+  },[])
 }
+
+
 
 function peopleNameOfAllHouses() {
   // your code goes here
+  return got.houses.reduce((acc,cv)=>{
+    acc[cv.name]=cv.people.map((p)=>p.name);
+    return acc;
+  },{})
 }
 
 // Testing your result after writing your function
